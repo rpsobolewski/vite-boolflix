@@ -2,6 +2,7 @@ import axios from "axios";
 import { reactive } from "vue";
 export const state = reactive({
   films: null,
+  searchQuery: "",
 
   fetchFilms() {
     let base_url = "https://api.themoviedb.org/3/search/movie";
@@ -10,7 +11,7 @@ export const state = reactive({
       .get(base_url, {
         params: {
           api_key: "f72277928616c6e9caa7f4df2963dd14",
-          query: "matrix",
+          query: this.searchQuery,
         },
       })
 
