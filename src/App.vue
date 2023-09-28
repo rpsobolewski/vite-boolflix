@@ -6,7 +6,7 @@ export default {
 
     return {
       state,
-      searchQuery: state.searchQuery,
+      searchQuery: "",
     }
   },
 
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <input type="text" v-model="searchQuery" placeholder="Inserisci un titolo">
+  <input type="text" v-model="state.searchQuery" placeholder="Inserisci un titolo">
   <button @click="searchMovies">Search</button>
 
   <div v-for=" film  in   state.films  ">
