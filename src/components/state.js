@@ -6,7 +6,7 @@ export const state = reactive({
 
   fetchFilms() {
     let base_url = "https://api.themoviedb.org/3/search/movie";
-
+    console.log("Search Query:", this.searchQuery);
     axios
       .get(base_url, {
         params: {
