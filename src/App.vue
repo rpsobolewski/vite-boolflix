@@ -33,11 +33,16 @@ export default {
       <div class="card_data text-center">
         <h1>titolo: {{ film.title }}</h1>
         <h2> titolo originale: {{ film.original_title }}</h2>
-        <span>{{ film.overview }}</span>
+        <span v-if="film.original_language != 'en'">lingua: {{ film.original_language }}</span>
+        <img class="flag" src="../src/img/british.png" alt="en" v-if="film.original_language == 'en'">
         <div>voto: {{ film.vote_average }}</div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.flag {
+  height: 20px;
+}
+</style>

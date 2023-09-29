@@ -2,7 +2,6 @@ import axios from "axios";
 import { reactive } from "vue";
 export const state = reactive({
   films: null,
-  searchQuery: "",
 
   fetchFilms() {
     let base_url = "https://api.themoviedb.org/3/search/movie";
