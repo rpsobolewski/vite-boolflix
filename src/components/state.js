@@ -3,6 +3,7 @@ import { reactive } from "vue";
 export const state = reactive({
   films: null,
   series: null,
+  searchQuery: "",
 
   fetchFilms() {
     let base_url = "https://api.themoviedb.org/3/search/movie";
@@ -19,6 +20,8 @@ export const state = reactive({
       .then((response) => {
         console.log(response);
         this.films = response.data.results;
+        console.log("film");
+
         console.log(this.films);
       });
   },
@@ -39,6 +42,7 @@ export const state = reactive({
       .then((response) => {
         console.log(response);
         this.series = response.data.results;
+        console.log("serie");
         console.log(this.series);
       });
   },
