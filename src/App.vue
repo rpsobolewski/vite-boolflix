@@ -41,6 +41,7 @@ export default {
       <div class="card_data text-center">
         <h1>titolo: {{ film.title }}</h1>
         <h2>titolo originale: {{ film.original_title }}</h2>
+        <p>FILM</p>
 
         <span v-if="!lingue.includes(film.original_language)">lingua: {{ film.original_language
         }}</span>
@@ -61,14 +62,15 @@ export default {
 
       <div class="card_data text-center">
         <h1>titolo: {{ serie.name }}</h1>
+        <p>TV SERIES</p>
 
 
         <span v-if="!lingue.includes(serie.original_language)">lingua: {{ serie.original_language
         }}</span>
-        <img class="flag" src="../src/img/british.png" alt="en" v-if="film.original_language == 'en'">
-        <img class="flag" src="../src/img/italian.png" alt="en" v-if="film.original_language == 'it'">
-        <img class="flag" src="../src/img/spanish.png" alt="en" v-if="film.original_language == 'es'">
-        <img class="flag" src="../src/img/french.png" alt="en" v-if="film.original_language == 'fr'">
+        <img class="flag" src="../src/img/british.png" alt="en" v-if="serie.original_language == 'en'">
+        <img class="flag" src="../src/img/italian.png" alt="en" v-if="serie.original_language == 'it'">
+        <img class="flag" src="../src/img/spanish.png" alt="en" v-if="serie.original_language == 'es'">
+        <img class="flag" src="../src/img/french.png" alt="en" v-if="serie.original_language == 'fr'">
 
 
 
