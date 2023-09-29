@@ -23,7 +23,7 @@ export const state = reactive({
       });
   },
 
-  fetchFilms() {
+  fetchSeries() {
     let tv_url = "https://api.themoviedb.org/3/search/tv";
 
     console.log("Search Query:", this.searchQuery);

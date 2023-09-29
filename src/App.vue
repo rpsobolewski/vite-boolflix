@@ -18,6 +18,7 @@ export default {
       console.log("Search Query:", this.searchQuery);
 
       state.fetchFilms();
+      state.fetchSeries();
     },
 
   },
