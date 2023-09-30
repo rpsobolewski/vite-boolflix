@@ -39,6 +39,9 @@ export default {
 
 
       <div class="card_data text-center">
+        <img v-if="film.poster_path == null" src="./img/404.jpg" alt="">
+
+        <img :src="'https://image.tmdb.org/t/p/w342' + film.poster_path" alt="">
         <h1>titolo: {{ film.title }}</h1>
         <h2>titolo originale: {{ film.original_title }}</h2>
         <p>FILM</p>
@@ -61,6 +64,9 @@ export default {
 
 
       <div class="card_data text-center">
+        <img v-if="serie.poster_path == null" src="./img/404.jpg" alt="">
+        <img :src="'https://image.tmdb.org/t/p/w342' + serie.poster_path" alt="">
+
         <h1>titolo: {{ serie.name }}</h1>
         <p>TV SERIES</p>
 
