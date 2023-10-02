@@ -20,8 +20,17 @@ export default {
       state.fetchFilms();
       state.fetchSeries();
     },
+    calculateStarRating(vote_average) {
+      const maxStars = 5;
+      const stelle_piene = Math.ceil(vote_average / 2);
+      const stelle_vuote = maxStars - stelle_piene;
+      return { stelle_piene, stelle_vuote };
+    },
 
   },
+
+
+
 
 }
 
@@ -87,6 +96,10 @@ export default {
 </template>
 
 <style scoped>
+.star-icon {
+  margin-right: 0.25rem;
+}
+
 .flag {
   height: 20px;
   aspect-ratio: 3/2;
