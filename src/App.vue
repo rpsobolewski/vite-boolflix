@@ -38,9 +38,27 @@ export default {
 </script>
 
 <template>
-  <input type="text" v-model="state.searchQuery" placeholder="Inserisci un titolo">
-  <button @click="searchMovies">Search </button>
+  <header class="d-flex justify-content-between">
+    <h1 class="logo p-2 ps-4">BOOLFLIX </h1><!-- logo -->
+    <div class="nav p-3">
 
+
+
+
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-secondary " type="button" @click="searchMovies"><svg class="search"
+            xmlns="http://www.w3.org/2000/svg" height="1em"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+              d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+          </svg></button>
+        <input type="text" class="form-control" v-model="state.searchQuery" placeholder="Inserisci un titolo"
+          aria-label="Example text with button addon" aria-describedby="button-addon1">
+      </div>
+
+    </div>
+
+  </header>
 
 
   <div v-for=" film  in   state.films  "><!-- film -->
@@ -124,6 +142,10 @@ export default {
 </template>
 
 <style scoped>
+header {
+  background-color: rgb(13, 13, 13);
+}
+
 .star-icon {
   margin-right: 0.25rem;
 }
@@ -131,5 +153,16 @@ export default {
 .flag {
   height: 20px;
   aspect-ratio: 3/2;
+}
+
+.logo {
+  font-family: 'Anton', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  color: rgb(231, 6, 6);
+}
+
+.search {
+  fill: white;
 }
 </style>
