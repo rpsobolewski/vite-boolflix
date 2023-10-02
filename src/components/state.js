@@ -3,7 +3,7 @@ import { reactive } from "vue";
 export const state = reactive({
   films: null,
   series: null,
-  searchQuery: "",
+  searchQuery: "matrix",
 
   fetchFilms() {
     let base_url = "https://api.themoviedb.org/3/search/movie";

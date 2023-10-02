@@ -30,7 +30,10 @@ export default {
   },
 
 
+  created() {
 
+    this.searchMovies();
+  },
 
 
 }
